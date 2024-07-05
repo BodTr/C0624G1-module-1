@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng ký người dùng</title>
+</head>
+<body>
+    <form action="#" style="margin: 20px; width: 500px" method="post" >
+        <fieldset>
+            <legend>Form đăng ký người dùng</legend>
+            <label for="full-name" class="norm-label">Họ và tên:</label>
+            <input type="text" id="full-name" name="name" />
+            <label for="email" class="norm-label">Email:</label>
+            <input type="email" id="email" name="email" />
+            <label for="phone-number" class="norm-label">Số điện thoại:</label>
+            <input  type="number" id="phone-number" name="phone"/>
+            <label class="norm-label">Giới tính:</label>
+            <input type="radio" id="Nam" name="gender" />
+            <label for="Nam">Nam</label>
+            <input type="radio" id="Nữ" name="gender" />
+            <label for="Nữ">Nữ</label>
+            <input type="submit" value="Đăng ký" name="submit-btn" style="display: block; margin: 5px" />
+        </fieldset>
+
+    </form>
+</body>
+<style>
+    .norm-label {
+        display: block;
+        font-weight: bold;
+        margin: 5px;
+    }
+</style>
+</html>
