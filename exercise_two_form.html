@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+</head>
+<body>
+<form action="#" method="post" style="margin-bottom: 20px">
+    <fieldset>
+        <legend>
+            Sở thích của bạn
+        </legend>
+        <div>
+            <label for="yourname" class="title">Họ và tên:</label>
+            <input type="text" id="yourname" name="yourname" />
+        </div>
+        <div>
+            <label for="email" class="title">Email:</label>
+            <input type="text" id="email" name="email" />
+        </div>
+        <div>
+            <div><label class="title">Sở thích</label></div>
+            <div style="float: left">
+                <span>
+                    <input type="checkbox" id="sport" name="sport" value="Thể thao" />
+                    <label for="sport" >Thể thao</label>
+                    <input type="checkbox" id="music" name="music" value="Âm nhạc" />
+                    <label for="music">Âm nhạc</label>
+                    <input type="checkbox" id="reading" name="reading" value="Đọc sách" />
+                    <label for="reading" >Đọc sách</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="web" name="web" value="Lướt web" />
+                    <label for="web" >Lướt web</label>
+                    <input type="checkbox" id="gaming" name="gaming" value="Chơi game" />
+                    <label for="gaming" >Chơi game</label>
+                    <input type="checkbox" id="cine" name="cine" value="Điện ảnh" />
+                    <label for="cine" >Điện ảnh</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="travel" name="travel" value="Du lịch" />
+                    <label for="travel" >Du lịch</label>
+                </span>
+            </div>
+        </div>
+        <div >
+            <input type="submit" id="submit" value="Gửi thông tin" />
+            <input type="reset" id="reset" value="Nhập lại" />
+        </div>
+    </fieldset>
+</form>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Đăng ký học viên</legend>
+        <div>
+            <label for="name" class="">Họ và tên:</label>
+            <input type="text" id="name" name="name" />
+        </div>
+        <div>
+            <label for="birthday">Ngày sinh:</label>
+            <input type="date" id="birthday" name="birthday" />
+        </div>
+
+        <div>
+            <label>Giới tính</label>
+            <input type="radio" id="male" name="gender" value="Nam" />
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="Nữ" />
+            <label for="female">Nữ</label>
+        </div>
+        <div>
+            <label for="location">Địa chỉ:</label>
+            <textarea id="location" name="location" row="4"></textarea>
+        </div>
+        <div>
+            <label for="chooseClass">Lớp:</label>
+            <select id="chooseClass">
+                <option value="" disabled selected>-Chọn lớp-</option>
+                <option value="Lớp 1"> Lớp 1</option>
+                <option value="Lớp 2"> Lớp 2</option>
+                <option value="Lớp 3"> Lớp 3</option>
+                <option value="Lớp 4"> Lớp 4</option>
+            </select>
+        </div>
+        <div>
+            <label for="email1">Email:</label>
+            <input type="email" id="email1" name="email" />
+        </div>
+        <div>
+            <label for="phoneNumber">Điện thoại:</label>
+            <input type="number" id="phoneNumber" name="phoneNumber" />
+        </div>
+        <div>
+            <input type="submit" value="Đăng ký" />
+            <input type="reset" id="reset1" value="Nhập lại" />
+        </div>
+    </fieldset>
+</form>
+</body>
+<style>
+    .title {
+        width: 100px;
+        float: left;
+        text-align: left;
+        padding-right: 10px;
+    }
+    div {
+        margin-bottom: 5px;
+    }
+    span {
+        display: block;
+
+    }
+    input#submit {
+        color: #444444;
+        text-shadow: 0 1px 1px #ffffff;
+        border-bottom: 2px solid #b2b2b2;
+
+    }
+    input#submit:hover {
+        color: #333333;
+        border: 1px solid #a4a4a4;
+        border-top: 2px solid #b2b2b2;
+        background-color: #a0dbc4;
+
+    }
+</style>
+</html>
