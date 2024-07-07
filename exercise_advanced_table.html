@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    internal css-->
+    <style>
+        td, th {
+            border: 1px solid;
+        }
+        th {
+            background-color: yellow;
+        }
+        tr:nth-child(odd) td:nth-child(odd) {
+            background-color: white;
+        }
+
+        tr:nth-child(odd) td:nth-child(even) {
+            background-color: black;
+        }
+
+        tr:nth-child(even) td:nth-child(odd) {
+            background-color: black;
+        }
+
+        tr:nth-child(even) td:nth-child(even) {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<table style="width: 500px; border: 1px solid">
+
+    <thead>
+    <tr>
+        <!--        hexa và RGB-->
+        <th style="background-color: yellow">STT</th>
+        <th>Tên</th>
+        <th>Địa chỉ</th>
+        <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Trương Tấn Hải <small>HaiTT</small></td>
+        <td>Quảng Nam</td>
+        <td>Sửa</td>
+        <td>Xóa</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Trương Tấn Hải</td>
+        <td>Quảng Nam</td>
+        <td>Sửa</td>
+        <td>Xóa</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Trương Tấn Hải</td>
+        <td>Quảng Nam</td>
+        <td>Sửa</td>
+        <td>Xóa</td>
+    </tr>
+    </tbody>
+    <h3 style="width: 500px; text-align: center">Thời khóa biểu</h3>
+    <p style="color: blue;width: 500px"><span>ABC</span><span style="float: right">BCD</span></p>
+</table>
+</body>
+</html>
