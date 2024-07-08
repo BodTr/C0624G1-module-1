@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình</title>
+    <style>
+        .title {
+            width: 100px;
+            float: left;
+            text-align: left;
+            padding-right: 10px;
+        }
+        div {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 50px;">
+        <p>Tính điểm trung bình</p>
+        <div>
+            <label for="mathScore" class="title">Điểm toán:</label>
+            <input type="number" id="mathScore" name="mathScore" />
+        </div>
+        <div>
+            <label for="literatureScore" class="title">Điểm văn:</label>
+            <input type="number" id="literatureScore" name="litaratureScore" />
+        </div>
+        <div>
+            <label for="englishScore" class="title">Điểm Anh:</label>
+            <input type="number" id="englishScore" name="englishScore" />
+        </div>
+        <div>
+            <button type="button" onclick="caculateAvgScore()">Tính điểm</button>
+        </div>
+    </div>
+    <script src="exercise.js"></script>
+</body>
+</html>
