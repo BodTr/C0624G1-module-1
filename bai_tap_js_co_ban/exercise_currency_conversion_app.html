@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<!--    <tabl >-->
+<!--        <tr>-->
+<!--            <th>Amount</th>-->
+<!--            <th> From Currency</th>-->
+<!--            <th>To Currency</th>-->
+<!--            <th></th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="number" name="amount" />-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </tabl>-->
+
+    <div class="container">
+        <div class="">
+            <label for="amount">Amount</label>
+            <input id="amount" name="amount" />
+        </div>
+        <div>
+            <label for="fromCurrency" >From Currency</label>
+            <select id="fromCurrency">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div>
+            <label for="toCurrency">To Currency</label>
+            <select id="toCurrency">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div>
+            <button type="button">Convert</button>
+        </div>
+    </div>
+    <script src="exercise_currency_conversion_app.js"></script>
+</body>
+</html>
