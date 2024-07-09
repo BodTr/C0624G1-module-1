@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        .container {
+            width: 700px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
-<!--    <tabl >-->
-<!--        <tr>-->
-<!--            <th>Amount</th>-->
-<!--            <th> From Currency</th>-->
-<!--            <th>To Currency</th>-->
-<!--            <th></th>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <input type="number" name="amount" />-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </tabl>-->
 
     <div class="container">
-        <div class="">
+        <div class="item-one">
             <label for="amount">Amount</label>
             <input id="amount" name="amount" />
         </div>
-        <div>
+        <div class="item-two">
             <label for="fromCurrency" >From Currency</label>
             <select id="fromCurrency">
                 <option value="vnd">VND</option>
                 <option value="usd">USD</option>
             </select>
         </div>
-        <div>
+        <div class="item-three">
             <label for="toCurrency">To Currency</label>
             <select id="toCurrency">
                 <option value="vnd">VND</option>
                 <option value="usd">USD</option>
             </select>
         </div>
-        <div>
+        <div class="item-four" style="margin-top: 15px;">
             <button type="button">Convert</button>
         </div>
     </div>
