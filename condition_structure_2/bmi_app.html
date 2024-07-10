@@ -26,6 +26,7 @@
             const height = document.getElementById('height').value
             const weight = document.getElementById('weight').value
             const bmi = Number(weight) / (Number(height) ^ 2)
+            console.log(bmi, "bmi", height, "height", weight, "weight")
             let status = ''
             if (bmi < 18) {
                 status = 'Gầy độ 3. Ăn thật nhiều vào nhé'
