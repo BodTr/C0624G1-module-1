@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Máy tính đơn giản</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 7px;
+
+        }
+        div {
+            /*margin: 5px;*/
+            /*border: 1px solid black;*/
+        }
+        button {
+            width: 100%;
+            /*border: 1px solid black;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="width: 40%; margin: 0 auto; text-align: center">
+        <input type="text" id="calculatorScreen" name="calculatorScreen" style="margin: 10px; width: 70%" />
+        <div class="grid-container">
+            <div class="grid-item-1">
+                <button type="button" id="one" onclick="pushOne()">1</button>
+            </div>
+            <div class="grid-item-2">
+                <button type="button" id="two" onclick="pushTwo()">2</button>
+            </div>
+            <div class="grid-item-3">
+                <button type="button" id="three" onclick="pushThree()">3</button>
+            </div>
+            <div class>
+                <button type="button" id="summation" onclick="pushSummation()">+</button>
+            </div>
+            <div>
+                <button type="button" id="four" onclick="pushFour()">4</button>
+            </div>
+            <div>
+                <button type="button" id="five" onclick="pushFive()">5</button>
+            </div>
+            <div>
+                <button type="button" id="six" onclick="pushSix()">6</button>
+            </div>
+            <div>
+                <button type="button" id="subtraction" onclick="pushSubtraction()">-</button>
+            </div>
+            <div>
+                <button type="button" id="seven" onclick="pushSeven()">7</button>
+            </div>
+            <div>
+                <button type="button" id="eight" onclick="pushEight()">8</button>
+            </div>
+            <div>
+                <button type="button" id="nine" onclick="pushNine()">9</button>
+            </div>
+            <div>
+                <button type="button" id="multiplication" onclick="pushMultiplication()">*</button>
+            </div>
+            <div>
+                <button type="button" id="ac" onclick="pushAC()" >AC</button>
+            </div>
+            <div>
+                <button type="button" id="zero" onclick="pushZero()">0</button>
+            </div>
+            <div>
+                <button type="button" id="equal" onclick="pushEqual()">=</button>
+            </div>
+            <div>
+                <button type="button" id="division" onclick="spushDivision()">/</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let dislayString = ''
+        function pushOne() {
+            dislayString = dislayString + '1'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushTwo() {
+            dislayString = dislayString + '2'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushThree() {
+            dislayString = dislayString + '3'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushFour() {
+            dislayString = dislayString + '4'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushFive() {
+            dislayString = dislayString + '5'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushSix() {
+            dislayString = dislayString + '6'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushSeven() {
+            dislayString = dislayString + '7'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushEight() {
+            dislayString = dislayString + '8'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushNine() {
+            dislayString = dislayString + '9'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushZero() {
+            dislayString = dislayString + '0'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushSummation() {
+            dislayString = dislayString + '+'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushSubtraction() {
+            dislayString = dislayString + '-'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushMultiplication() {
+            displayString = displayString + '*'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+        function pushDivision() {
+            displayString = displayString + '/'
+            document.getElementById('calculatorScreen').value = dislayString
+        }
+
+        function pushEqual() {
+
+        }
+
+        function pushAC() {
+
+        }
+    </script>
+</body>
+
+</html>
