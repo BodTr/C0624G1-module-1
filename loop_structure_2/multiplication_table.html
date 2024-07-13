@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+        table, th, td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+<script>
+    let multiplicationTable = '<table>'
+    for (let i = 1; i <= 10; i++) {
+        multiplicationTable = multiplicationTable + '<tr>'
+        for (let j = 2; j <= 10; j++) {
+            multiplicationTable = `${multiplicationTable}<td>${j} * ${i} = ${i * j}</td>`
+        }
+        multiplicationTable = multiplicationTable + '</tr>'
+    }
+    multiplicationTable = multiplicationTable + '</table>'
+    document.write(multiplicationTable)
+</script>
+</body>
+</html>
