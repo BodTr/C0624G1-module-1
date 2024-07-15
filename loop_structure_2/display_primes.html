@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+
+    <script>
+        let num = 2
+        let count = 0
+        let size = prompt('Nhập số lượng số nguyên tố: ')
+        while (count <= size) {
+            if (num === 2) {
+                document.write('2, ')
+                count++
+            } else {
+                // Đặt lính canh
+                let isPrime = true
+                for (let i = 2; i <= Math.sqrt(num); i++ ) {
+                    if (num % i === 0) {
+                        isPrime = false
+                        break
+                    }
+                }
+
+                if (isPrime === true) {
+                    document.write(num + ', ')
+                    count++
+                }
+            }
+
+            num++
+        }
+    </script>
+</body>
+</html>
