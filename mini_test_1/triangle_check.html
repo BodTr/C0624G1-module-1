@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác</title>
+</head>
+<body>
+    <div>
+        <label for="a">Cạnh a:</label>
+        <input id="a" name="a" />
+    </div>
+    <div>
+        <label for="b">Cạnh b:</label>
+        <input id="b" name="b" />
+    </div>
+    <div>
+        <label for="c">Cạnh c:</label>
+        <input id="c" name="c" />
+    </div>
+    <div>
+        <button type="button" onclick="checkTriangle()">Kiểm tra tam giác</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkTriangle() {
+            const a = document.getElementById('a').value
+            const b = document.getElementById('b').value
+            const c = document.getElementById('c').value
+            const numbA = Number(a)
+            const numbB = Number(b)
+            const numbC = Number(c)
+            let isGreaterThanZero = false
+            let checkTriangle = false
+            if (numbA > 0 && numbB > 0 && numbC > 0) {
+                isGreaterThanZero = true
+            }
+            if (numbA + numbB > numbC && numbA + numbC > numbB && numbB + numbC > numbA) {
+                checkTriangle = true
+            }
+
+            if (isGreaterThanZero === true && checkTriangle === true ) {
+                let triangleType = 'tam giác thường'
+                if (numbA === numbB && numbA ===numbC && numbB === numbC ) {
+                    triangleType = 'tam giác đều'
+                } else if (numbA ** 2 + numbB ** 2 === numbC ** 2 || numbA ** 2 + numbC ** 2 === numbB ** 2 || numbC ** 2 + numbB ** 2 === numbA ** 2) {
+                    triangleType = 'tam giác vuông'
+                }
+                document.getElementById('result').textContent = `Ba cạnh trên tạo thành một ${triangleType}`
+            } else {
+                document.getElementById('result').textContent = 'Ba cạnh trên không tạo thành một tam giác'
+            }
+
+        }
+    </script>
+</body>
+</html>

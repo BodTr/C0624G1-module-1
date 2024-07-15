@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính bình phương 2</title>
+</head>
+<body>
+    <div>
+        <label for="a">Điền a:</label>
+        <input id="a" name="a" />
+    </div>
+    <div>
+        <label for="b">Điền b:</label>
+        <input id="b" name="b" />
+    </div>
+    <div>
+        <button type="button" onclick="calculateSquare()">Tính bình phương</button>
+    </div>
+    <div>
+        <p id="resultA"></p>
+        <p id="resultB"></p>
+    </div>
+    <script>
+        function calculateSquare() {
+            const a = document.getElementById('a').value
+            const b = document.getElementById('b').value
+            const aSquare = a ** 2
+            const bSquare = b ** 2
+            const msg = `Bình phương của a là ${aSquare}`
+            const msg1 = `Bình phương của b là ${bSquare}`
+            document.getElementById('resultA').textContent = msg
+            document.getElementById('resultB').textContent = msg1
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng từ a đến b</title>
+</head>
+<body>
+    <div>
+        <label for="a">Điền a:</label>
+        <input id="a" name="a" />
+    </div>
+    <div>
+        <label for="b">Điền b:</label>
+        <input id="b" name="b" />
+    </div>
+    <div>
+        <button type="button" onclick="calculateSum()">Tính bình phương</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateSum() {
+            const a = document.getElementById('a').value
+            const b = document.getElementById('b').value
+            const numbA = Number(a)
+            const numbB = Number(b)
+            let sum = 0
+            let msg = ''
+            if (numbA >= numbB) {
+                sum = 0
+                msg = `${a} không nhỏ hơn ${b}`
+            } else {
+                for (let i = numbA; i <= numbB; i++) {
+                    sum += i
+                    console.log(sum, "sum")
+                }
+                console.log(sum, "sum")
+                msg = `Tổng từ ${a} đến ${b} là ${sum}`
+            }
+
+            document.getElementById('result').textContent = msg
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm thế kỷ theo năm</title>
+</head>
+<body>
+    <div>
+        <label for="a">Điền a:</label>
+        <input id="a" name="a" />
+    </div>
+    <div>
+        <button type="button" onclick="calculateCentury()">Tính thế kỷ</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateCentury() {
+            const a = document.getElementById('a').value
+            const centuryA = parseInt(a / 100) + 1
+            const message = `Năm ${a} ở thế kỷ ${centuryA}`
+            document.getElementById('result').textContent = message
+        }
+
+    </script>
+</body>
+</html>

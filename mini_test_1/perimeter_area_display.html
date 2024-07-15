@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị Chu vi và Diện tích</title>
+</head>
+<body>
+    <div>
+        <label for="a">Điền a:</label>
+        <input id="a" name="a" />
+    </div>
+
+    <div>
+        <button type="button" onclick="calculateSP()">Tính S và P</button>
+    </div>
+    <div>
+        <p id="area"></p>
+        <p id="perimeter"></p>
+    </div>
+    <script>
+        function calculateSP() {
+            const a = document.getElementById('a').value
+
+            const area = a ** 2
+            const perimeter = a * 4
+            const msg = `Diện tích của hình là ${area}`
+            const msg1 = `Chu vi của hình là ${perimeter}`
+            document.getElementById('area').textContent = msg
+            document.getElementById('perimeter').textContent = msg1
+        }
+    </script>
+</body>
+</html>

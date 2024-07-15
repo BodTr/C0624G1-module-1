@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display area</title>
+</head>
+<body>
+    <div>
+        <label for="a">Điền a:</label>
+        <input id="a" name="a" />
+    </div>
+    <div>
+        <label for="b">Điền b:</label>
+        <input id="b" name="b" />
+    </div>
+    <div>
+        <button type="button" onclick="calculateS()">Tính S</button>
+    </div>
+    <div>
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        // Câu lệnh để nhận vào giá trị từ 1 ô input là: document.getElementById('id').value
+        function calculateS() {
+            const a = document.getElementById('a').value
+            const b = document.getElementById('b').value
+            const area = a * b
+            const msg = `Diện tích của hình là ${area}`
+            document.getElementById('result').textContent = msg
+        }
+    </script>
+</body>
+</html>
