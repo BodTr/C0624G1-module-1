@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Lấy n số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let n = Number(prompt('Enter a number: '))
+
+        let isPrime = true
+        let nSqrt = Math.sqrt(n)
+        for (let i = 2; i <= nSqrt; i++) {
+            if (nSqrt % i === 0) {
+                isPrime = false
+                break
+            }
+        }
+        if (isPrime === true) {
+            console.log(n, "là số nguyên tố")
+        } else {
+            console.log(n, "ko phải là số nguyên tố")
+        }
+
+    </script>
+</body>
+</html>
