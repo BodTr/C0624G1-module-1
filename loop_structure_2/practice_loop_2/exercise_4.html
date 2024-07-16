@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <script>
+        // let rect = "<table>"
+        // for (let i = 0; i < 7; i++) {
+        //     rect += "<tr>"
+        //     for (let j = 0; j < 21; j++) {
+        //         rect += "<td> * </td>"
+        //     }
+        //     rect += "</tr>"
+        // }
+        // rect += "</table>"
+        // document.write(rect)
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j < 22; j++) {
+                if (j == 0 || j == 21 || i == 0 || i == 6) {// lấy vd sẽ hiểu, khi i = 0, j = 1, 2, 3,... đều viết *; khi i khác 0 hoặc 6 thì chỉ các cột 1 hoặc cột cuối (j = 0 hoặc j = 21 thì mới viết dấu sao). Còn các trường hợp khác sẽ viết dấu cách
+                    document.write("*")
+                } else {
+                    document.write("&nbsp&nbsp")
+                }
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>

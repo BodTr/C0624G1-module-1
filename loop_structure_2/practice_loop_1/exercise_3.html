@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <
+    <script>
+        let count = +prompt('Nhập số số hạng trong dãy fibonacci: ')
+        if (count <= 0) {
+            alert('Phải nhập số > 0')
+        } else {
+            let a = 0
+            let b = 1
+            let sum
+            let total = 0
+            for (let i = 0; i < count; i++) {
+                sum = a + b
+                total += sum
+                document.write(sum + ", ")
+
+                a = b
+                b = sum
+            }
+            document.write()
+        }
+    </script>
+</body>
+</html>
