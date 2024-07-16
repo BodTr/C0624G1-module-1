@@ -12,7 +12,8 @@
 <body>
     <input type="text" id="txtValue" />
     <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array()" />
-    <input type="button" id="btnDisplay" onclick="display_array()" />
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array()" />
+    <div id="result"></div>
     <script>
         let x = 0
         let array = []
@@ -23,7 +24,11 @@
             document.getElementById('txtValue').value = ''
         }
         function display_array() {
-
+            let e = '<hr/>';
+            for (let i = 0; i < array.length; i++) {
+                e += 'Element ' + i + ' = ' + array[i] + '<br/>'
+            }
+            document.getElementById('result').innerHTML = e
         }
     </script>
 </body>
