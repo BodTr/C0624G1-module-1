@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bàn cờ caro đơn giản</title>
+</head>
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+    <input type="button" value="Change value" onclick="changeValue()" />
+    <script>
+
+        // let b = document.getElementById('carogame')
+        // let board = []
+        //
+        // let data = ''
+        // for (let i = 0; i < 5; i++) {
+        //     board[i] = [0, 0, 0, 0, 0]
+        // }
+        //
+        // for (let i = 0; i < 5; i++) {
+        //     data += "<br/>"
+        //     for (let j = 0; j < 5; j++) {
+        //         data += board[i][j] + "&nbsp;&nbsp;"
+        //     }
+        // }
+        // // data += "<br/><br/><input type='button' value='Change value' onclick='changeValue()' />"
+        // b.innerHTML = data
+        //
+        //
+        // function changeValue() {
+        //     let positionX = prompt('x: ')
+        //     let positionY = prompt('y: ')
+        //     data = ""
+        //     board[positionX][positionY] = "x";
+        //     console.log(board)
+        //     for (let i = 0; i < 5; i++) {
+        //         data += "<br/>"
+        //         for (let j = 0; j < 5; j++) {
+        //             data += board[i][j] + '&nbsp;&nbsp;'
+        //         }
+        //     }
+        //     b.innerHTML = data;
+        // }
+
+        let b = document.getElementById('carogame')
+        let board = []
+        for (let i = 0; i < 5; i++) {
+            board[i] = [0, 0, 0, 0, 0]
+        }
+
+        function draw() {
+            let data = ''
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>"
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;"
+                }
+            }
+            // data += "<br/><br/><input type='button' value='Change value' onclick='changeValue()' />"
+            b.innerHTML = data
+        }
+
+        draw();
+
+        function changeValue() {
+            let positionX = +prompt('x: ')
+            let positionY = +prompt('y: ')
+            board[positionX][positionY] = "x";
+            console.log(board)
+            draw();
+        }
+
+    </script>
+</body>
+</html>
