@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <script>
+        // Bài 1
+        let myColor = ["Red", "Green", "White", "Black"]
+        const string = myColor.join()
+        console.log(string, "string Bai 1")
+
+        // Bài 2
+        let promptNumber = prompt('Nhập số: ')
+        let numArr = promptNumber.split("")
+        let arrayLength = numArr.length
+        for (let i = 0; i < arrayLength - 1; i++) { // vì ta xét cả numArr[i +1] nên ko xét i = arrayLength - 1
+            if (Number(numArr[i]) % 2 === 0 && Number(numArr[i + 1]) % 2 === 0) {
+                numArr[i] = numArr[i]+ '-'
+            }
+        }
+        console.log(numArr, "numArr")
+        let string2 = numArr.join('')
+        console.log(string2, 'string Bai 2')
+
+        // Bài 3
+        let promptString = prompt('Enter the string: ')
+        // console.log(promptString, "promptString")
+        let stringArray = promptString.split("")
+        // console.log(stringArray, 'stringArray')
+        let toUpperCase = stringArray.map(e => {
+            if (e === e.toUpperCase()) {
+                return e.toLowerCase()
+            } else {
+                return e.toUpperCase()
+            }
+        })
+        console.log(toUpperCase, "string Bai 3")
+    </script>
+</body>
+</html>
