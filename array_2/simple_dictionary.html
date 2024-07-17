@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+    <div>
+        <label for="word">Nhập từ: </label>
+        <input type="text" id="word" />
+        <button type="button" onclick="translateEngToVn()">Dịch</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        function translateEngToVn() {
+            let EngWordsArray = ['one', 'two', 'three', 'tree', 'cold', 'heart', 'brain', 'liver', 'kidney', 'stomach']
+            let VnWordsArray = ['một', 'hai', 'ba', 'cây', 'lạnh', 'trái tim', 'bộ não', 'lá gan', 'thận', 'dạ dày']
+            const arrLength = EngWordsArray.length
+            let transWord = ''
+            let inputWord = document.getElementById('word').value
+            let validWordIndex = EngWordsArray.indexOf(inputWord)
+            if (validWordIndex === -1) {
+                transWord = 'Không tìm thấy'
+            } else {
+                transWord = VnWordsArray[validWordIndex]
+            }
+
+            document.getElementById('result').textContent = transWord
+        }
+
+    </script>
+</body>
+</html>
