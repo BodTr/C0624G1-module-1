@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let elecCount = +prompt('Nhập số số điện: ')
+        let totalMoney = 0
+        let elecMoney = 0
+        let rentMoney = 7500000
+        let internetMoney = 300000
+        if (elecCount < 50) {
+            elecMoney = elecCount * 1900
+        } else if (elecCount <= 150) {
+            elecMoney = elecCount * 2500
+        } else {
+            elecMoney = elecCount * 2900
+        }
+
+        totalMoney = elecMoney + rentMoney + internetMoney
+
+        alert(`Chi phí hàng tháng: ${totalMoney}`)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+    <input type="button" value="Change value" onclick="changeValue()" />
+    <script>
+        let caroBoard = document.getElementById('carogame')
+        let board = []
+        for (let i = 0; i < 5; i++) { // vòng for này tạo mảng 2 chiều
+            board[i] = ['[.]', '[.]', '[.]', '[.]', '[.]']
+        }
+
+        function drawBoard() {
+            let data = ''
+            for (let i = 0; i < 5; i++) {
+                data += "<br />"
+                for (let j = 0; j < 5; j++) { // vòng lặp này tạo bảng hình caro
+                    data += board[i][j] + "&nbsp;&nbsp;"
+                }
+            }
+            caroBoard.innerHTML = data
+        }
+
+        drawBoard()
+        let currentValue = 'o'
+        function changeValue() {
+            let positionX = +prompt('x: ')
+            let positionY = +prompt('y: ')
+            console.log(currentValue, 'currentValue')
+            if (currentValue === 'o') {
+                board[positionX][positionY] = 'x'
+                currentValue = 'x'
+            } else {
+                board[positionX][positionY] = 'o'
+                currentValue = 'o'
+            }
+            console.log(board)
+            drawBoard()
+        }
+
+
+    </script>
+</body>
+</html>

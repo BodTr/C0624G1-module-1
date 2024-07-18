@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let initNumb = +prompt('Nhập số: ')
+        function checkPrime(num) { // số nguyên tố là số tự nhiên lớn hơn 1
+            let isPrime = true
+            if (num <= 1) {
+                isPrime = false
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) { // num = 2 -> khi i = 2; i < sqrt(num) -> ko chạy vào vòng for
+                    if (num % i === 0) {
+                        isPrime = false
+                        break
+                    }
+
+                }
+            }
+
+
+            return isPrime
+
+        }
+
+        console.log(checkPrime(initNumb), "checkPrime()")
+
+        let initArray = [1, 2, 3, 9, 5, 7, 6, 3, 5, 11, 8]
+
+        function primeCount(arr) {
+            let primeArr = initArray.filter(e => {
+                if (checkPrime(e) === true) {
+                    return e
+                }
+            })
+
+            let primeArrLength = primeArr.length
+
+            return primeArrLength
+        }
+
+        console.log(`Array ${initArray} có ${primeCount(initArray)} số nguyên tố`)
+
+    </script>
+</body>
+</html>

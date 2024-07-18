@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let initArr = [-15, 2, -12, 9, -9, 7, -1, -8, -5, 5, -3]
+        function negativeCount(arr) {
+            let negativeArr = initArr.filter(e => {
+                return e < 0
+            })
+            let negativeNumCount = negativeArr.length
+            return negativeNumCount
+        }
+        console.log(negativeCount(initArr))
+    </script>
+</body>
+</html>
