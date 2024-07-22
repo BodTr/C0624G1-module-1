@@ -13,16 +13,23 @@
 </head>
 <body>
     <script>
+        let arr = []
         let sout = "<table>"
         for (let i = 1; i <= 10; i++) {
             sout = sout + "<tr>"
+            let arrX = []
             for (let j = 1; j <= 10; j++) {
                 sout = sout + "<td>" + i * j + "</td>"
+                arrX[j -1] = i * j
             }
+            arr[i-1] = arrX
             sout = sout + "</tr>"
         }
         sout = sout + "</table>"
         document.write(sout)
+        console.log(arr, "arr")
+        console.log(arr[4][6], "arr[4][6]")
+
     </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            Type anything slowly
+        </h2>
+        <div>
+            <textarea rows="10" id="textArea" style="width: 300px; border: 3px solid black" onkeydown="fakingOnTyping(this)"></textarea>
+        </div>
+    </div>
+    <script>
+        let count = 0
+        function fakingOnTyping(e) {
+
+            let fakeString = 'TÔI LÀ MỘT ĐỨA NGỐC!!!'
+            let fakeArr = fakeString.split("")
+            console.log(e.value.length, "e.value.length")
+            // e.value += fakeArr[count]
+
+            console.log(fakeArr,"fakeArr")
+            // for (let i = 0; i< fakeArr.length ; i++) {
+            //     e.value += fakeArr[i]
+            // }
+            count++
+        }
+    </script>
+</body>
+</html>

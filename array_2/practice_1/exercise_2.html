@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let initArray = [-24, 1, 16, 2, 22, 3, 45, 5, 6, -2]
+        let maxValue = initArray[0]
+        for (let i = 1; i < initArray.length; i++) {
+            if (maxValue < initArray[i]) {
+                maxValue = initArray[i]
+            }
+        }
+        let maxValueIndex = initArray.indexOf(maxValue)
+        document.write(`array có giá trị lớn nhất là ${maxValue} ở index ${maxValueIndex}`)
+    </script>
+</body>
+</html>
