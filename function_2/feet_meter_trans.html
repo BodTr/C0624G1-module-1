@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let initFoot = +prompt('Nhập foot: ')
+        let initMeter = +prompt('Nhập meter: ')
+        let meterValue
+        let footValue
+        function footToMeter(foot) {
+            return foot * 0.305
+        }
+
+        function meterToFoot(meter) {
+            return meter * 3.279
+        }
+
+        meterValue = footToMeter(initFoot)
+        footValue = meterToFoot(initMeter)
+
+        document.write(`<p>${initFoot} foot = ${meterValue}</p><p>${initMeter} meter = ${footValue} foot</p>`)
+
+    </script>
+</body>
+</html>
