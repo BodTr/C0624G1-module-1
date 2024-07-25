@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+    <script>
+        class Rectangle {
+            length;
+            height;
+            constructor(length, height) {
+                this.length = length;
+                this.height = height;
+            }
+
+            get getLength() {
+                return this.length
+            }
+
+            set setLength(length) {
+                if (isNaN(length) && length <= 0) {
+                    console.log('invalid length value: ' + length)
+                } else {
+                    this.length = length
+                }
+            }
+
+            get getHeight() {
+                return this.height
+            }
+
+            set setHeight(height) {
+                if (isNaN(height) && height <= 0) {
+                    console.log('invalid height value: ' + height)
+                } else {
+                    this.height = height
+                }
+            }
+
+             caculateS() {
+                return this.length * this.height;
+             }
+
+             calculateP() {
+                return (this.length + this.height) * 2
+             }
+
+            drawRect(context, x, y) {
+                context.beginPath()
+                context.strokeRect(x, y, this.length, this.height)
+                context.fillStyle = 'black'
+
+            }
+        }
+        // let x = Math.random() * window.innerWidth
+        // let y = Math.random() * window.innerHeight
+        // console.log(x, " - x,", y, " - y")
+        let x = 90
+        let y = 90
+        let ctx = document.getElementById('myCanvas').getContext('2d')
+        let rect = new Rectangle(400, 300)
+        console.log(rect, "rect")
+        rect.drawRect(ctx, x, y)
+    </script>
+</body>
+</html>
