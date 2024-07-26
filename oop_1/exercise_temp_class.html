@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            celcius;
+            constructor(celcius) {
+                this.celcius = celcius
+            }
+            get getCelcius() {
+                return this.celcius
+            }
+
+            set setCelcius(celcius) {
+                if (isNaN(celcius) && celcius < -273) {
+                    console.log('invalid celcius value: ' + celcius)
+                } else {
+                    this.celcius = celcius
+                }
+            }
+
+            calculateF() {
+                return (this.celcius * (9 / 5) + 32)
+            }
+
+            calculateK() {
+                return this.celcius + 273.15
+            }
+        }
+        let celcius = new Temperature(25)
+        let kenvin = celcius.calculateK()
+        let farenheit = celcius.calculateF()
+        document.write(`<p>Nhiệt độ K: ${kenvin}</p><p>Nhiệt độ F: ${farenheit}</p>`)
+    </script>
+</body>
+</html>
